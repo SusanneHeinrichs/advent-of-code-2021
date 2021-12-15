@@ -1,20 +1,16 @@
-with open('data/day_1.txt') as f:
+with open('data/day_1.txt', 'r') as f:
     lines = f.readlines()
-depth_measurements = []
-counter = 0
+    depth_measurements = [int(entry.strip()) for entry in lines]
 
-for depth in lines:
-    depth_measurements.append(int(depth.strip()))
-#print(depth_measurements)
 
 # Part 1
+counter = 0
 for i in range(len(depth_measurements)-1):
     if depth_measurements[i] < depth_measurements[i+1]:
         counter += 1
 print("There are "+str(counter) + " cases where the following measurement was higher than the previous")
 
 # Part 2
-sum = 0
 counter = 0
 for i in range (len(depth_measurements)-3):
     sum1 = depth_measurements[i]+ depth_measurements[i+1] + depth_measurements[i+2]
