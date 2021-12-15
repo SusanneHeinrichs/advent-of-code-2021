@@ -11,7 +11,7 @@ for depth in lines:
 for i in range(len(depth_measurements)-1):
     if depth_measurements[i] < depth_measurements[i+1]:
         counter += 1
-#print(counter)
+print("There are "+str(counter) + " cases where the following measurement was higher than the previous")
 
 # Part 2
 sum = 0
