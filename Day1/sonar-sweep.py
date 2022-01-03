@@ -18,4 +18,3 @@ for i in range (len(depth_measurements)-3):
     if sum1 < sum2 :
         counter += 1
 print("There are "+str(counter) + " cases where the sliding window of three measurements was higher compared to the previous sum.")
-
